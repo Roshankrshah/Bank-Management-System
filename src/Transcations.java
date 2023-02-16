@@ -9,7 +9,7 @@ public class Transcations extends JFrame implements ActionListener {
     String pinnumber;
     Transcations(String pinnumber){
         this.pinnumber = pinnumber;
-        setSize(800,830);
+        setSize(800,800);
         setLocation(300,0);
         setLayout(null);
 
@@ -60,7 +60,7 @@ public class Transcations extends JFrame implements ActionListener {
         exit.setBounds(305,495,150,30);
         exit.addActionListener(this);
         image.add(exit);
-        //setUndecorated(true);
+        setUndecorated(true);
         setVisible(true);
 
     }
@@ -68,6 +68,9 @@ public class Transcations extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent ae){
         if(ae.getSource()== exit){
             System.exit(0);
+        } else if(ae.getSource() == deposit){
+            setVisible(false);
+            new Deposit(pinnumber).setVisible(true);
         }
     }
 
