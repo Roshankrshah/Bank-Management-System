@@ -12,20 +12,20 @@ public class Login extends JFrame implements ActionListener {
     JPasswordField pintext;
     Login(){
         setTitle("Automated Teller Machine");
-        setBounds(500,200,800,480);
+        setBounds(500,200,600,400);
         setLayout(null);
 
         ImageIcon i1 = new ImageIcon("D:\\Bank management system\\icons\\logo.jpg");
-        Image i2 = i1.getImage().getScaledInstance(80,80,Image.SCALE_DEFAULT);
+        Image i2 = i1.getImage().getScaledInstance(100,100,Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
 
         JLabel  label  = new JLabel(i3);
-        label.setBounds(50,40,80,80);
+        label.setBounds(70,40,80,80);
         add(label);
 
         JLabel text = new JLabel("Welcome to ATM");
         text.setFont(new Font("Osward",Font.BOLD,38));
-        text.setBounds(150,60,500,50);
+        text.setBounds(170,60,500,50);
         add(text);
 
         JLabel card_no = new JLabel("Card No.:");
